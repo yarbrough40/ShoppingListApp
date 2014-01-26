@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<!--
+       Licensed to the Apache Software Foundation (ASF) under one
+       or more contributor license agreements.  See the NOTICE file
+       distributed with this work for additional information
+       regarding copyright ownership.  The ASF licenses this file
+       to you under the Apache License, Version 2.0 (the
+       "License"); you may not use this file except in compliance
+       with the License.  You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing,
+       software distributed under the License is distributed on an
+       "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+       KIND, either express or implied.  See the License for the
+       specific language governing permissions and limitations
+       under the License.
+-->
+<html>
+    <head>
+<title>Shopping List</title>
+
+<!--
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>	
+-->
+<link rel="stylesheet" href="themes/shoppinglist.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/jquery.mobileNEW.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="Styles/index.css" />
+	<link rel="stylesheet" href="Styles/master.css" />
+	<script src="js/sl.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+
+
+        <script type="text/javascript">
+            function onLoad() {
+                app.initialize();
+            }
+      </script>
+
+	   
+    </head>
+    <body>
+ <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  Main Page   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<div data-role="page" id="main" data-theme="e" class="page-content" >
+								
+   <div id = "maindiv" style="text-align:center;">
+   <table style="width:100%;border-collapse:collapse;">
+    <tr>
+        <td id="" 
+            style="text-align:center; background-color:transparent; color: #fff;border-color:transparent;" 
+            class="style1">
+			<p />         
+        </td>
+    </tr>
+    <tr>
+        <td  id="testTD" style="text-align:right;background-color:transparent; border-color:#313131;">
+		</td>
+     </tr>
+    </table>
+    <div id="HeaderText" style="padding: 0px 15px 0px 15px; background-color:transparent;">   
+												<label style="font-size:32px; font-weight: bold;" >SHOPPING LIST</label>
+											<p />
+
+    </div>				
+					<div id = "listDiv" style="padding: 0px 15px 0px 15px; background-color:transparent;">
+	
+
+					</div>
+   
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="e" style="">
+        <table class="FooterTablestyle"><tr>
+							<td style="width:45%;"><a href="#additem" id = "btnAdd" data-role="button"
+                                    data-transition="fade" data-direction="reverse" data-shadow="true";>Add To List</a></td>
+											<td style="width:10%;"></td>
+							<td style="width:45%;"><a id = "btnClear" data-role="button"
+                                    data-transition="fade" data-direction="reverse" data-shadow="true";>Clear Purchased</a></td>
+            </tr>
+        </table>
+    </div>
+
+	</div><!-- /content -->	
+</div><!-- /page -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  additem Page   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<div data-role="page" id="additem" data-theme="e" class="page-content" >
+								
+   <div id = "maindiv" style="text-align:center;">
+   
+   
+   
+
+
+   
+			<!-- CONTENT -->
+						
+								<div id="newItemDiv" data-theme="b" class="page-content">
+								<table class="tablestyle">
+									<tr> <td></td></tr>
+									<tr> <td></td></tr>
+									<tr> <td>
+												<!-- QUICK PICKS -->
+										<a href="#popupMenu" id="QPbutton" data-rel="popup" data-role="button" data-inline="true" aria-haspopup="true" style= "height:12px; font-size:11px;"
+										aria-owns="popupMenu" aria-expanded="false" class="ui-link ui-btn ui-btn-inline ui-shadow ui-corner-all" role="button">Quick Picks</a>
+										<div data-role="popup" id="popupMenu" data-theme="b" style="width:260px;">
+										
+											<table id = "QPheader" class="tablestyle"><tr><td><label id="lblQPhead"></label></td></tr>
+													<tr><td id="QPbuttons" style="width:100%;">
+													
+																	<a id="btnDelQP" href="#deleteDialog" data-rel="dialog">
+																				<img src='img/iconDel.png' style="height:45px;"/>
+																			</a>
+																	<a id="btnSaveQP" data-rel="dialog">
+																				<img src='img/iconSave.png' style="height:45px;"/>
+																			</a>
+															
+																			
+																		
+													</td>					
+													</tr>																																																																					</td></tr>
+													
+													</table>
+														
+														<div id = "divQPlist">
+														<!--
+														<ul data-role="listview" data-theme="b" data-dividertheme="e">
+															<li data-theme="e" data-icon="false"><a onclick="QPChoose('salt','salt');">salt</a></li>
+															<li data-theme="e" data-icon="false"><a name="has" onclick="QPChoose('Twizlers',this.name);">Twizlers</a></li>
+														</ul>
+														-->
+														</div>
+										</div>
+										<!-- QUICK PICKS -->							
+									</td></tr>
+									<tr> 
+										<td>
+										<input type="text" name="name" value="" id="tbItemName" onchange="textChanged();" onfocus="$('#lblAddMsg').html('');";
+										style="height:30px; text-align:center; font-size:20px;" value placeholder = "Name of Item"  />
+										<textarea  id="tbItemDesc" style="text-align:center; font-size:20px;" onchange="textChanged();";
+											value placeholder = "Optional Description"></textarea>
+										<input type="hidden" id ="hfQPprimkey" value=""></input>
+										</td>
+									</tr>	
+									<tr> 
+										<td style = "width:100%;height:47px;">													
+											<label id="lblAddMsg" style = "color:#C60000;font-size:16px;"></label>
+										</td>
+									</tr>
+									<tr> <td></td></tr>	
+									<tr> <td></td></tr>
+									<tr> <td></td></tr>
+									<tr> <td></td></tr>	
+									<tr> <td style="height: 40px;"></td></tr>										
+									<tr> <td><a id = "btnAddItem" data-role="button"  
+												data-shadow="true";>ADD</a></td>
+											<td style="width:10%;"></td></tr>
+								</table>
+								</div>
+		<!-- CONTENT -->
+		
+
+
+		
+		
+   <div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="e" style="">
+        <table class="FooterTablestyle"><tr>
+							<td style="width:45%;"></td>
+							<td style="width:45%;"><a id = "btnGoToList" data-role="button"  href="#main"
+                                    data-transition="fade" data-shadow="true";>Go To List</a></td>
+            </tr>
+        </table>
+    </div>
+	
+	
+	</div><!-- /content -->	
+</div><!-- /page -->
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+<!-- XXXXXXXXXXXXXXXXX delete dialog page XXXXXXXXXXXXXXXXX-->
+<div data-role="page" id="deleteDialog" data-theme="e" class="page-content" >
+								
+   <div id = "deleteDialogdiv" style="text-align:center;" data-theme="b" class="page-content">
+		
+		<p style="font-size:19px; font-weight: bold;">you are about to delete this Quick Pick item</p>
+		<label id = "lblDelQPname" style="font-size:19px"> </label>
+		<br/><br/><br/>
+		<a data-theme="a" data-role="link" style="color: #999;"  href="#additem">Cancel</a> <br/><br/><br/><br/><a data-role="button" data-theme="e" href="#additem"  id="btnOKdelQP">OK - Delete</a> 
+   </div>
+ </div>
+<!-- XXXXXXXXXXXXXXXXX--> 
+ 
+ <!-- XXXXXXXXXXXXXXXXX sign in page XXXXXXXXXXXXXXXXX-->
+<div data-role="page" id="signin" data-theme="e" class="page-content" >
+	
+
+   <div id = "signindiv" style="text-align:center;" data-theme="b" class="page-content">
+		
+		<p style="font-size:19px; font-weight: bold;">please sign in</p>
+		<br /><br /><br />
+		
+		<table class="tablestyle">
+			<tr><td style = "width:15%"></td>
+					<td style = "width:70%">
+						<ul data-role="listview" data-theme="b" data-dividertheme="e">
+							<li data-theme="d" data-icon="false"><a href="#main" onclick="signIn('Dyan');">Dyan</a></li>
+							<br /><br /><br />
+							<li data-theme="b" data-icon="false"><a href="#main" onclick="signIn('Brian');">Brian</a></li>
+						</ul>										
+					</td>
+			<td style = "width:15%"></td></tr>
+		</table>
+
+
+		
+   </div>
+ </div>
+<!-- XXXXXXXXXXXXXXXXX--> 
+ 
+<script type="text/javascript">
+	function signIn(userName){
+		window.localStorage.setItem('username',userName)
+	}
+	
+
+	$(document).delegate('#additem', 'pageshow', function () {  //PAGE LOAD EVENT   AddItem page
+    //Your code for each page load here
+		//clear out all the values on the add item page
+		resetAllAddPageValues();
+	//load up the quick pick items
+		getQPList();
+	});
+	
+		$(document).delegate('#main', 'pageshow', function () {  //PAGE LOAD EVENT   Main page
+    //Your code for each page load here
+		getShoppingList();
+
+	});
+	
+	$("#btnClear").bind("click", function(event, ui){
+	//deleteme();
+	
+		clearPurchased();
+		
+	});
+	
+	$("#QPbutton").bind("click", function(event, ui){//////////////////////////////////////////////////////////////////////////////////
+		/*  //btnDelQP btnSaveQP
+		var count = $("#divQPlist li").length;
+		if(count > 0){ //list has items
+		}
+		*/	
+		$('#lblAddMsg').html('');
+		itemName = $("#tbItemName").val();
+		$("#lblQPhead").html(itemName);
+		if(itemName == ""){
+			$("#hfQPprimkey").val(''); 
+		}
+							
+		if($("#hfQPprimkey").val() == ""){		
+			$("#btnDelQP").css("visibility", "hidden");
+				if(itemName == ""){$("#btnSaveQP").css("visibility", "hidden");
+				}else{
+					$("#btnSaveQP").css("visibility", "visible");
+				}
+		}else{
+			$("#btnDelQP").css("visibility", "visible");
+			$("#btnSaveQP").css("visibility", "hidden");		
+		}
+
+		
+	});
+
+	
+	
+	$("#btnAdd").bind("click", function(event, ui){
+
+	});	
+	
+	$("#btnAddItem").bind("click", function(event, ui){
+		if($("#tbItemName").val() == ''){ // did not enter an item name
+			messageLabelError("oops! ... you need to provide a name for this item");
+		}
+		else{ // ok to insert new item
+		//console.log('adding: ' + $("#tbItemName").val() + " | " + $("#tbItemDesc").val())
+		itemName = $("#tbItemName").val();
+		addShopListItem(itemName,$("#tbItemDesc").val());	
+		resetAllAddPageValues();
+		messageLabelInfo(itemName + " has been added");
+		
+		//$.mobile.changePage(#main)
+		}
+
+	});	
+	
+	
+	$("#btnSaveQP").bind("click", function(event, ui){
+		//console.log("saving " + $("#tbItemName").val() + "|" + $("#tbItemDesc").val())	
+		var pk = 0;
+		InsertDelQuickPick($("#tbItemName").val(),$("#tbItemDesc").val(),pk);	
+		resetAllAddPageValues();
+	//load up the quick pick items
+		$( "#popupMenu" ).popup( "close" );
+		messageLabelInfo('quick pick added');
+	});		
+	
+	$("#btnDelQP").bind("click", function(event, ui){
+		//console.log("QP = " + $("#lblQPhead").html())
+		$("#lblDelQPname").html($("#lblQPhead").html());	
+	});	
+	
+	$("#btnOKdelQP").bind("click", function(event, ui){
+		//console.log("deleting #" + $("#hfQPprimkey").val());
+		
+		var pk = $("#hfQPprimkey").val();
+		InsertDelQuickPick('X','X',pk);	
+			
+	});		
+	
+
+	
+	function QPChoose(itemName,itemDesc){
+		var str = itemDesc;
+		console.log("itemDesc = " + itemDesc);
+		var strs = str.split("|")
+		desc = strs[0];
+		pk = strs[1]
+		console.log("desc = " + desc + "pk = " + pk);
+		strs[i]
+	
+	
+		$("#tbItemName").val(itemName);
+		$("#tbItemDesc").val(desc);
+		$("#hfQPprimkey").val(pk);   // NOT WORKING - FIND OUT HOW TO POPULATE THE HIDDEN FIELD
+		$( "#popupMenu" ).popup( "close" );
+		
+		$("#btnAddItem").css("visibility","visible")
+	}
+
+
+	/*
+	function QPSaveClick(){
+		var pk = $("#hfQPprimkey").val(pk);
+		if(pk ==""){pk = 0}
+		InsertDelQuickPick($("#tbItemName").val(),$("#tbItemDesc").val(),pk);
+		
+	}
+	*/
+	/*function QPDelClick(){
+		var pk = $("#hfQPprimkey").val();
+		if(pk ==""){pk = 0}
+		InsertDelQuickPick('','',pk);
+	}*/
+	function textChanged(){
+		if($("#tbItemName").val() ==""){
+			//$("#btnAddItem").css("visibility","hiden")}else{$("#btnAddItem").css("visibility","visible")}
+			$('#hfQPprimkey').val('');}
+	}
+
+	function resetAllAddPageValues(){
+		$('#lblAddMsg').html('');
+		$("#tbItemName").val('');	
+		$("#tbItemDesc").val('');
+		$("#hfQPprimkey").val('');
+		//$("#btnAddItem").css("visibility","hidden")
+	//load up the quick pick items
+		//getQPList();
+	}
+	
+	function messageLabelInfo(message){
+		$("#lblAddMsg").css("color", "#666");
+		$('#lblAddMsg').html(message);
+	}
+	
+	function messageLabelError(message){
+		$("#lblAddMsg").css("color", "#C60000");
+		$('#lblAddMsg').html(message);
+	}	
+	
+	
+</script>
+
+    </body>
+</html>

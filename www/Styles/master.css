@@ -1,0 +1,63 @@
+  .tablestyle
+  {
+      width:100%;
+      text-align:center;
+  }
+
+#QPbuttons {
+	width: 100%;
+	text-align:center;
+	vertical-align: middle;
+}
+#QPbuttons  :hover{
+	background-color: #ccc;
+}
+#lblQPhead{ color: #999;}
+
+
+.inputBox
+{
+    width: 90%;
+    background-color:#4f88b5;
+    border: 2px solid #333;
+    position:absolute;
+    top:55px;
+    /*left:10px;*/
+    margin-left:15px;
+    margin-right:100px;
+    visibility:hidden;
+    z-index:10;
+}
+    
+.MessageBoard
+{
+  font-size:12px;  
+  table-layout:fixed;
+}
+.MsgBoardBoxes
+{
+    height:auto; 
+    width:98%;
+    overflow:hidden;
+    font-size:14px;
+    color:#fff;
+    background-color:#333;
+    border:none;
+    resize:none;
+    
+}
+
+.nameBox
+{
+    background-color:#666;
+    color:#fff;
+    width: 90%;
+    border: 2px solid #000;
+    position:absolute;
+    margin-left:15px;
+    margin-right:100px;
+    visibility:hidden;
+    z-index:2;
+    top:10px;
+}
+

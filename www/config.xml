@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.brian.ShoppingList"
+	version 	= "1.0.0">
+
+	<name>ShoppingList</name>
+
+	<description>
+		Brian and Dyan's Shopping List App
+	</description>
+  <gap:splash src="splash.png" />
+
+  <author href="http://yarbrough40.com"
+		email="yarbrough40@yahoo.com">
+		Brian Yarbrough
+	</author>
+
+  <icon gap:role="default" src="icon.png"/>
+
+	<!--<feature name="http://api.phonegap.com/1.0/geolocation"/>-->
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<!--<feature name="http://api.phonegap.com/1.0/notification"/>-->
+
+  <preference name="orientation" value="portrait" />
+  <preference name="splash-screen-duration" value="6000" />
+  
+</widget>
