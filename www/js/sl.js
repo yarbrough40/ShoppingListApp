@@ -1,5 +1,6 @@
 	function cb(){}
-	
+	var BaseUrl = "http://woodlandshalloween.com/ShoppingList/Service.svc/"
+	//var BaseUrl = "http://localhost:60635/ShoppingList/Service.svc/"
 /*local storage items:
 username
 
@@ -10,7 +11,7 @@ username
 	//window.localStorage.getItem(key);
 	//window.localStorage.removeItem('guessCount');		
 
-		
+
 		
 	function getShoppingList(){
 	div = document.getElementById("listDiv");
@@ -22,7 +23,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/GetShoppingList?callback=cb",
+				url: BaseUrl + "GetShoppingList?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -89,7 +90,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/updateItem/ShopList/" + colName + "/" + primkey + "/" + val + "?callback=cb",
+				url: "BaseUrlupdateItem/ShopList/" + colName + "/" + primkey + "/" + val + "?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -112,7 +113,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/clearShoppingList?callback=cb",
+				url: "BaseUrlclearShoppingList?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {										
 					$('#listDiv').trigger('create');
@@ -138,14 +139,14 @@ username
 	//uri += "/" + window.localStorage.getItem('username');
 	console.log("name= " + name); console.log("desc= " + desc);
 	
-	console.log("http://localhost:60635/ShoppingList/Service.svc/insertItem?" + uri + "&callback=cb");
+	console.log("BaseUrlinsertItem?" + uri + "&callback=cb");
 			$.ajax({
 				//PRIMKEY  ITEMNAME IDEMDESC USERNAME CREATEDATE ISVISIBLE ISPURCHASED COLOR
 				crossDomain: true,
 				type:"POST",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/insertItem?" + uri + "&callback=cb",
+				url: "BaseUrlinsertItem?" + uri + "&callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -170,7 +171,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/getQuickPicks?callback=cb",
+				url: "BaseUrlgetQuickPicks?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -214,7 +215,7 @@ username
 	itemname = encodeURIComponent(itemname);
 	desc = encodeURIComponent(desc);
 	uri = "itemname=" + itemname + "&itemdesc=" + desc + "&pkIfDelete=" + pk;
-		console.log("http://localhost:60635/ShoppingList/Service.svc/insertDeleteQuickPick?" + uri + "&callback=cb");
+		console.log("BaseUrlinsertDeleteQuickPick?" + uri + "&callback=cb");
 			$.ajax({
 				
 				//PRIMKEY  ITEMNAME IDEMDESC USERNAME CREATEDATE ISVISIBLE ISPURCHASED COLOR
@@ -222,7 +223,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "http://localhost:60635/ShoppingList/Service.svc/insertDeleteQuickPick?" + uri + "&callback=cb",
+				url: "BaseUrlinsertDeleteQuickPick?" + uri + "&callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
