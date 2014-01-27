@@ -15,6 +15,7 @@ username
 		
 	function getShoppingList(){
 	div = document.getElementById("listDiv");
+	console.log(BaseUrl + "GetShoppingList?callback=cb");
 	//window.localStorage.setItem('guessCount',0);
 		try{
 			$.ajax({
@@ -90,7 +91,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "BaseUrlupdateItem/ShopList/" + colName + "/" + primkey + "/" + val + "?callback=cb",
+				url: BaseUrl + "updateItem/ShopList/" + colName + "/" + primkey + "/" + val + "?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -113,7 +114,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "BaseUrlclearShoppingList?callback=cb",
+				url: BaseUrl + "clearShoppingList?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {										
 					$('#listDiv').trigger('create');
@@ -146,7 +147,7 @@ username
 				type:"POST",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "BaseUrlinsertItem?" + uri + "&callback=cb",
+				url: BaseUrl + "insertItem?" + uri + "&callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -171,7 +172,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "BaseUrlgetQuickPicks?callback=cb",
+				url: BaseUrl + "getQuickPicks?callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
@@ -215,7 +216,7 @@ username
 	itemname = encodeURIComponent(itemname);
 	desc = encodeURIComponent(desc);
 	uri = "itemname=" + itemname + "&itemdesc=" + desc + "&pkIfDelete=" + pk;
-		console.log("BaseUrlinsertDeleteQuickPick?" + uri + "&callback=cb");
+		console.log(BaseUrl + "insertDeleteQuickPick?" + uri + "&callback=cb");
 			$.ajax({
 				
 				//PRIMKEY  ITEMNAME IDEMDESC USERNAME CREATEDATE ISVISIBLE ISPURCHASED COLOR
@@ -223,7 +224,7 @@ username
 				type:"GET",
 				contentType: "application/json; charset=utf-8",
 				async:false,
-				url: "BaseUrlinsertDeleteQuickPick?" + uri + "&callback=cb",
+				url: BaseUrl + "insertDeleteQuickPick?" + uri + "&callback=cb",
 				dataType: "jsonp",                
 				success: function (response) {	
 				
