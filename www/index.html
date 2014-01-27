@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="js/jquery.mobileNEW.min.js"></script>
-
+	<script src="cordova.js"></script> <!--2.9.1-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="Styles/index.css" />
@@ -241,10 +241,10 @@
 		$(document).delegate('#main', 'pageshow', function () {  //PAGE LOAD EVENT   Main page
     //Your code for each page load here
 	
-	if (window.localStorage.getItem('username'){
+	if (window.localStorage.getItem('username')){
 		getShoppingList();
 		}else{
-		$.mobile.changePage(#signin);
+		$.mobile.changePage("#signin");
 		}
 		
 	});
