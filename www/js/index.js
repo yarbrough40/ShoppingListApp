@@ -29,7 +29,11 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
 		console.log("deviceready added");
-
+				    document.addEventListener("backbutton", function () {
+                    navigator.app.exitApp();
+					});
+				//d.innerHTML += '<br/>backbutton exitApp() added';
+				console.log("backbutton exitApp() added");
     },
     // deviceready Event Handler
     //
@@ -39,11 +43,8 @@ var app = {
 		d = document.getElementById('testDiv');
         app.receivedEvent('deviceready');
         console.log('deviceready() has fired');
-		d.innerHTML += '<br/>deviceready() has fired';
-		       document.addEventListener("backbutton", function () {
-                    navigator.app.exitApp();
-                });
-				d.innerHTML += '<br/>backbutton exitApp() added';
+		//d.innerHTML += '<br/>deviceready() has fired';
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
