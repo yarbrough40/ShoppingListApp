@@ -25,10 +25,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
     -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
-textarea
-{
-    -webkit-user-select: text !important;
-}
+
 body {
     background-color:#E4E4E4;
     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);

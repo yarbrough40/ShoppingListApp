@@ -36,11 +36,14 @@ var app = {
     // The scope of `this` is the event. In order to call the `receivedEvent`
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
+		d = document.getElementById('testDiv');
         app.receivedEvent('deviceready');
         console.log('deviceready() has fired');
+		d.innerHTML += '<br/>deviceready() has fired';
 		       document.addEventListener("backbutton", function () {
                     navigator.app.exitApp();
                 });
+				d.innerHTML += '<br/>backbutton exitApp() added';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
