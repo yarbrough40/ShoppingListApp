@@ -37,7 +37,10 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        document.getElementById("testDiv").innerHTML = 'deviceready() has fired';
+        console.log('deviceready() has fired');
+		       document.addEventListener("backbutton", function () {
+                    navigator.app.exitApp();
+                });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
