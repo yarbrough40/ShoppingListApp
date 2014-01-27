@@ -240,8 +240,13 @@
 	
 		$(document).delegate('#main', 'pageshow', function () {  //PAGE LOAD EVENT   Main page
     //Your code for each page load here
+	
+	if (window.localStorage.getItem('username'){
 		getShoppingList();
-
+		}else{
+		$.mobile.changePage(#signin);
+		}
+		
 	});
 	
 	$("#btnClear").bind("click", function(event, ui){
