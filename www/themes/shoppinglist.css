@@ -304,7 +304,7 @@ html .ui-bar-a .ui-btn:hover,
 html .ui-body-a .ui-btn:hover,
 html body .ui-group-theme-a .ui-btn:hover,
 html head + body .ui-btn.ui-btn-a:hover {
-	background: #ededed /*{a-bhover-background-color}*/;
+	/*background: #ededed {a-bhover-background-color}*/;
 	border-color: #dddddd /*{a-bhover-border}*/;
 	color: #333333 /*{a-bhover-color}*/;
 	text-shadow: 0 /*{a-bhover-shadow-x}*/ 0 /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #f3f3f3 /*{a-bhover-shadow-color}*/;
@@ -315,7 +315,7 @@ html .ui-bar-a .ui-btn:active,
 html .ui-body-a .ui-btn:active,
 html body .ui-group-theme-a .ui-btn:active,
 html head + body .ui-btn.ui-btn-a:active {
-	background: #e8e8e8 /*{a-bdown-background-color}*/;
+	/*background: #e8e8e8 {a-bdown-background-color}*/;
 	border-color: #dddddd /*{a-bdown-border}*/;
 	color: #333333 /*{a-bdown-color}*/;
 	text-shadow: 0 /*{a-bdown-shadow-x}*/ 0 /*{a-bdown-shadow-y}*/ 0 /*{a-bdown-shadow-radius}*/ #f3f3f3 /*{a-bdown-shadow-color}*/;
@@ -466,7 +466,7 @@ html .ui-bar-b .ui-btn:hover,
 html .ui-body-b .ui-btn:hover,
 html body .ui-group-theme-b .ui-btn:hover,
 html head + body .ui-btn.ui-btn-b:hover {
-	background: #ededed /*{b-bhover-background-color}*/;
+	/*background: #ededed {b-bhover-background-color}*/;
 	border-color: #dddddd /*{b-bhover-border}*/;
 	color: #333333 /*{b-bhover-color}*/;
 	text-shadow: 0 /*{b-bhover-shadow-x}*/ 0 /*{b-bhover-shadow-y}*/ 0 /*{b-bhover-shadow-radius}*/ #f3f3f3 /*{b-bhover-shadow-color}*/;
@@ -477,7 +477,7 @@ html .ui-bar-b .ui-btn:active,
 html .ui-body-b .ui-btn:active,
 html body .ui-group-theme-b .ui-btn:active,
 html head + body .ui-btn.ui-btn-b:active {
-	background: #e8e8e8 /*{b-bdown-background-color}*/;
+	/*background: #e8e8e8 {b-bdown-background-color}*/;
 	border-color: #b5b6af /*{b-bdown-border}*/;
 	color: #333333 /*{b-bdown-color}*/;
 	text-shadow: 0 /*{b-bdown-shadow-x}*/ 0 /*{b-bdown-shadow-y}*/ 0 /*{b-bdown-shadow-radius}*/ #f3f3f3 /*{b-bdown-shadow-color}*/;
@@ -794,7 +794,7 @@ html .ui-bar-d .ui-btn:hover,
 html .ui-body-d .ui-btn:hover,
 html body .ui-group-theme-d .ui-btn:hover,
 html head + body .ui-btn.ui-btn-d:hover {
-	background: #ededed /*{d-bhover-background-color}*/;
+	/*background: #ededed {d-bhover-background-color}*/;
 	border-color: #dddddd /*{d-bhover-border}*/;
 	color: #333333 /*{d-bhover-color}*/;
 	text-shadow: 0 /*{d-bhover-shadow-x}*/ 1px /*{d-bhover-shadow-y}*/ 0 /*{d-bhover-shadow-radius}*/ #f3f3f3 /*{d-bhover-shadow-color}*/;
@@ -805,7 +805,7 @@ html .ui-bar-d .ui-btn:active,
 html .ui-body-d .ui-btn:active,
 html body .ui-group-theme-d .ui-btn:active,
 html head + body .ui-btn.ui-btn-d:active {
-	background: #e8e8e8 /*{d-bdown-background-color}*/;
+	/*background: #e8e8e8 {d-bdown-background-color}*/;
 	border-color: #dddddd /*{d-bdown-border}*/;
 	color: #333333 /*{d-bdown-color}*/;
 	text-shadow: 0 /*{d-bdown-shadow-x}*/ 1px /*{d-bdown-shadow-y}*/ 0 /*{d-bdown-shadow-radius}*/ #f3f3f3 /*{d-bdown-shadow-color}*/;
@@ -958,7 +958,7 @@ html .ui-bar-e .ui-btn:hover,
 html .ui-body-e .ui-btn:hover,
 html body .ui-group-theme-e .ui-btn:hover,
 html head + body .ui-btn.ui-btn-e:hover {
-	background: #ededed /*{e-bhover-background-color}*/;
+	/*background: #ededed {e-bhover-background-color}*/;
 	border-color: #dddddd /*{e-bhover-border}*/;
 	color: #333333 /*{e-bhover-color}*/;
 	text-shadow: 0 /*{e-bhover-shadow-x}*/ 0 /*{e-bhover-shadow-y}*/ 0 /*{e-bhover-shadow-radius}*/ #f3f3f3 /*{e-bhover-shadow-color}*/;
@@ -969,7 +969,7 @@ html .ui-bar-e .ui-btn:active,
 html .ui-body-e .ui-btn:active,
 html body .ui-group-theme-e .ui-btn:active,
 html head + body .ui-btn.ui-btn-e:active {
-	background: #e8e8e8 /*{e-bdown-background-color}*/;
+	/*background: #e8e8e8 {e-bdown-background-color}*/;
 	border-color: #dddddd /*{e-bdown-border}*/;
 	color: #333333 /*{e-bdown-color}*/;
 	text-shadow: 0 /*{e-bdown-shadow-x}*/ 0 /*{e-bdown-shadow-y}*/ 0 /*{e-bdown-shadow-radius}*/ #f3f3f3 /*{e-bdown-shadow-color}*/;
@@ -1122,7 +1122,7 @@ html .ui-bar-f .ui-btn:hover,
 html .ui-body-f .ui-btn:hover,
 html body .ui-group-theme-f .ui-btn:hover,
 html head + body .ui-btn.ui-btn-f:hover {
-	background: #ededed /*{f-bhover-background-color}*/;
+	/*background: #ededed {f-bhover-background-color}*/;
 	border-color: #dddddd /*{f-bhover-border}*/;
 	color: #333333 /*{f-bhover-color}*/;
 	text-shadow: 0 /*{f-bhover-shadow-x}*/ 1px /*{f-bhover-shadow-y}*/ 0 /*{f-bhover-shadow-radius}*/ #f3f3f3 /*{f-bhover-shadow-color}*/;
@@ -1133,7 +1133,7 @@ html .ui-bar-f .ui-btn:active,
 html .ui-body-f .ui-btn:active,
 html body .ui-group-theme-f .ui-btn:active,
 html head + body .ui-btn.ui-btn-f:active {
-	background: #e8e8e8 /*{f-bdown-background-color}*/;
+	/*background: #e8e8e8 {f-bdown-background-color}*/;
 	border-color: #dddddd /*{f-bdown-border}*/;
 	color: #333333 /*{f-bdown-color}*/;
 	text-shadow: 0 /*{f-bdown-shadow-x}*/ 1px /*{f-bdown-shadow-y}*/ 0 /*{f-bdown-shadow-radius}*/ #f3f3f3 /*{f-bdown-shadow-color}*/;
@@ -1288,7 +1288,7 @@ html .ui-bar-g .ui-btn:hover,
 html .ui-body-g .ui-btn:hover,
 html body .ui-group-theme-g .ui-btn:hover,
 html head + body .ui-btn.ui-btn-g:hover {
-	background: #ededed /*{g-bhover-background-color}*/;
+	/*background: #ededed {g-bhover-background-color}*/;
 	border-color: #dddddd /*{g-bhover-border}*/;
 	color: #333333 /*{g-bhover-color}*/;
 	text-shadow: 0 /*{g-bhover-shadow-x}*/ 1px /*{g-bhover-shadow-y}*/ 0 /*{g-bhover-shadow-radius}*/ #f3f3f3 /*{g-bhover-shadow-color}*/;
@@ -1299,7 +1299,7 @@ html .ui-bar-g .ui-btn:active,
 html .ui-body-g .ui-btn:active,
 html body .ui-group-theme-g .ui-btn:active,
 html head + body .ui-btn.ui-btn-g:active {
-	background: #e8e8e8 /*{g-bdown-background-color}*/;
+	/*background: #e8e8e8 {g-bdown-background-color}*/;
 	border-color: #dddddd /*{g-bdown-border}*/;
 	color: #333333 /*{g-bdown-color}*/;
 	text-shadow: 0 /*{g-bdown-shadow-x}*/ 1px /*{g-bdown-shadow-y}*/ 0 /*{g-bdown-shadow-radius}*/ #f3f3f3 /*{g-bdown-shadow-color}*/;

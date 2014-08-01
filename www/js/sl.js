@@ -1,6 +1,6 @@
 	function cb(){}
-	var BaseUrl = "http://woodlandshalloween.com/ShoppingList/Service.svc/"
-	//var BaseUrl = "http://localhost:60635/ShoppingList/Service.svc/"
+	var BaseUrl = "http://parkstreethalloween.com/ShoppingList/Service.svc/"
+	//var BaseUrl = "http://184.57.7.180/ShoppingList/Service.svc/"
 /*local storage items:
 username
 
